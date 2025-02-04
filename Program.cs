@@ -192,20 +192,20 @@ static class Game
         foreach (char c in $"{playerName}: {message}")
         {
             Console.Write(c);
-            Thread.Sleep(10);
+            Thread.Sleep(50);
         }
         Console.WriteLine();
-        Thread.Sleep(100);
+        Thread.Sleep(200);
     }
     static void NpcrText(string message)
     {
         foreach (char c in $"{npcName}: {message}")
         {
             Console.Write(c);
-            Thread.Sleep(10);
+            Thread.Sleep(50);
         }
         Console.WriteLine();
-        Thread.Sleep(100);
+        Thread.Sleep(200);
     }
     static void InsideBook()
     {
@@ -305,7 +305,7 @@ static class Game
             Console.SetCursorPosition(0, 2);
         }
         Console.WriteLine("아무키나 눌러 다음");
-        Console.ReadLine();
+        Console.ReadKey();
         TutorialFight();
     }
 
@@ -391,9 +391,6 @@ static class Game
                 NpcrText("굿 그런식으로 싸우면 됨 그럼 화이팅해라 엔터 눌러서 마을로 가 이제 너 맘대로 해");
                 Console.ReadKey();
                 Village();
-                return
-
-                ;
             }
             if (hp <= 0)
             {
