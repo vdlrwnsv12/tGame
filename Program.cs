@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+
 static class Game
 {
     static Random random = new Random();
@@ -49,10 +51,10 @@ static class Game
                 if (selectedOption == 0) // "게임 시작" 선택
                 {
 
-                    //StartGame();
+                    StartGame();
                     // InsideBook();
                     //TutorialFight();
-                    Village();
+                    //Village();
                     return;
                 }
 
@@ -476,23 +478,120 @@ $$$$$#$$$$=$$=====*==****!!**#=**!*!!;;;;!;!;*$=##*;::~~~:~:;:;;**=$@@@#$#*#@@#$
         if (playerAct == 1)
         {
             DisplayStats();
+            PlayerText("1' 입력해서 마을로 돌아가자");
             string s = Console.ReadLine();
-            if (s == "돌아가기")
+
+            if (s == "1")
             {
                 Village();
             }
         }
         else if (playerAct == 2)
         {
-            //OpenInventory();
+            OpenInventory();
         }
         else
         {
-            //OpenStore();
+            //상
         }
-
-
     }
+    static void OpenInventory()
+    {
+        Console.WriteLine("아이템 목록");
+        ShowItemList();
+        Console.ReadLine();
+        
+    }
+    class Item
+    {
+        public string Name { get; }
+        public string Description { get; }
+        public string Type { get; }
+                public int Effect { get; } 
+
+        public Item(string name, string description, string type, int effect)
+        {
+            Name = name;
+            Description = description;
+            Type = type;
+            Effect = effect;
+        }
+        public void Use()
+        {
+            //Console.WriteLine($"{Name}을(를) 사용했습니다!");
+            if (Type == "소모품")
+            {
+                Console.WriteLine($"효과: {Effect} 만큼 회복");
+            }
+            else if (Type == "무기")
+            {
+                Console.WriteLine($"{Name}를 착용했습니다!");
+            }
+            else if (Type == "보호구")
+            {
+                Console.WriteLine($"{Name}를 착용했습니다!");
+            }
+        }
+    }
+
+    // 아이템 목록 생성
+    static List<Item> itemList = new List<Item>
+{
+    new Item("체력 포션", "HP를 5 회복하는 포션", "소모품", 5),
+    new Item("낡은 검", "짬찌가 사용하는 낡은 검 (공 + 1)", "무기", 1),
+    new Item("개구린 방패", "방어력을 올려주는 방패(방 + 1)", "보호구", 1) 
+};
+
+    // 아이템 목록 출력 함수
+    static void ShowItemList()
+    {
+        Console.WriteLine("\n📜 [아이템 목록]");
+        foreach (var item in itemList)
+        {
+            Console.WriteLine($"- {item.Name} ({item.Type}): {item.Description}");
+        }
+        
+        Console.WriteLine("사용할 아이템의 이름을 입력, 돌아가려면 숫자 1번");
+        while (true)
+        {
+            string itemInput = Console.ReadLine();
+
+            UseItem(itemInput);
+
+            if (itemInput == "1")
+            {
+                Village();
+                break;
+            }
+        }
+    }
+
+    // 아이템 사용 함수
+    static void UseItem(string itemName)
+    {
+            Item foundItem = itemList.Find(item => item.Name == itemName);
+
+        if (foundItem == null)
+        {
+            Village();
+        } 
+            switch (foundItem.Type)
+            {
+                case "소모품":
+                    hp += foundItem.Effect;
+                    break;
+                case "무기":
+                    power += foundItem.Effect;
+                    Console.WriteLine($"{foundItem.Name}를 착용했습니다!");
+                    break;
+                case "보호구":
+                    guard += foundItem.Effect;
+                    Console.WriteLine($"{foundItem.Name}를 착용했습니다!");
+                    break;
+            }
+        }
+    
+
     static void TutoMoster()
     {
         Console.Clear();
