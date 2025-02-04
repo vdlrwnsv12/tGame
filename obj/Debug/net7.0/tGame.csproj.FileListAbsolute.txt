@@ -1,0 +1,15 @@
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/bin/Debug/net7.0/tGame
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/bin/Debug/net7.0/tGame.deps.json
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/bin/Debug/net7.0/tGame.runtimeconfig.json
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/bin/Debug/net7.0/tGame.dll
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/bin/Debug/net7.0/tGame.pdb
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.csproj.AssemblyReference.cache
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.AssemblyInfoInputs.cache
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.AssemblyInfo.cs
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.csproj.CoreCompileInputs.cache
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.dll
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/refint/tGame.dll
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.pdb
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/tGame.genruntimeconfig.cache
+/Users/vdlrwnsv/Desktop/development/TextRpg/tGame/tGame/obj/Debug/net7.0/ref/tGame.dll
